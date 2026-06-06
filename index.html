@@ -8,14 +8,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #0a0f1e;
-      --surface:  #111827;
-      --border:   #1e2d45;
-      --accent:   #2563eb;
-      --accent2:  #3b82f6;
-      --text:     #e2e8f0;
-      --muted:    #94a3b8;
-      --label:    #64748b;
+      --bg:       #f4f6f8;
+      --surface:  #ffffff;
+      --border:   #dce3ea;
+      --accent:   #1a3a6b;
+      --accent2:  #1e4d8c;
+      --text:     #0f1f3d;
+      --muted:    #3a5070;
+      --label:    #607a99;
     }
 
     body {
@@ -44,7 +44,7 @@
       font-size: 18px;
       font-weight: 700;
       letter-spacing: .02em;
-      color: #fff;
+      color: var(--text);
     }
     .logo span { color: var(--accent2); }
     .confidential {
@@ -68,7 +68,7 @@
       font-weight: 800;
       letter-spacing: -.02em;
       line-height: 1.1;
-      color: #fff;
+      color: var(--text);
       margin-bottom: 10px;
     }
     .hero h1 span { color: var(--accent2); }
@@ -103,7 +103,7 @@
     .badge .badge-value {
       font-size: 15px;
       font-weight: 600;
-      color: #fff;
+      color: var(--text);
     }
 
     /* ── DIVIDER ── */
