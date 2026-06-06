@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuantWaveTech — Systematic Investment Management</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0a0f1e;
+      --surface:  #111827;
+      --border:   #1e2d45;
+      --accent:   #2563eb;
+      --accent2:  #3b82f6;
+      --text:     #e2e8f0;
+      --muted:    #94a3b8;
+      --label:    #64748b;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .02em;
+      color: #fff;
+    }
+    .logo span { color: var(--accent2); }
+    .confidential {
+      font-size: 11px;
+      color: var(--label);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 64px 32px 80px;
+    }
+
+    /* ── HERO ── */
+    .hero { margin-bottom: 56px; }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 54px);
+      font-weight: 800;
+      letter-spacing: -.02em;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .hero h1 span { color: var(--accent2); }
+    .hero .tagline {
+      font-size: 13px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    /* ── BADGES ── */
+    .badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .badge {
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px 22px;
+      min-width: 160px;
+    }
+    .badge .badge-label {
+      font-size: 10px;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--label);
+      margin-bottom: 4px;
+    }
+    .badge .badge-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* ── DIVIDER ── */
+    .divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+    /* ── SECTION ── */
+    .section { margin-bottom: 44px; }
+    .section-title {
+      font-size: 10px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section p {
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    /* ── TABLE ── */
+    .info-table { width: 100%; border-collapse: collapse; }
+    .info-table tr { border-bottom: 1px solid var(--border); }
+    .info-table tr:last-child { border-bottom: none; }
+    .info-table td {
+      padding: 11px 0;
+      vertical-align: top;
+    }
+    .info-table td:first-child {
+      color: var(--label);
+      font-size: 13px;
+      font-weight: 600;
+      width: 200px;
+      padding-right: 24px;
+    }
+    .info-table td:last-child {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    /* ── LIST ── */
+    .bullet-list { list-style: none; padding: 0; }
+    .bullet-list li {
+      color: var(--muted);
+      padding: 5px 0;
+      padding-left: 20px;
+      position: relative;
+      font-size: 14px;
+    }
+    .bullet-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* ── MISSION BLOCKQUOTE ── */
+    .mission-quote {
+      border-left: 3px solid var(--accent);
+      padding: 18px 24px;
+      background: var(--surface);
+      border-radius: 0 6px 6px 0;
+      color: var(--muted);
+      font-style: italic;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+    }
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer .foot-left { font-size: 12px; color: var(--label); }
+    footer .foot-right { font-size: 12px; color: var(--label); }
+    footer a { color: var(--accent2); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">QuantWave<span>Tech</span></div>
+    <div class="confidential">Confidential — For Qualified Investors Only</div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <div class="hero">
+    <p class="tagline">Systematic Investment Management</p>
+    <h1>QuantWave<span>Tech</span></h1>
+
+    <div class="badges">
+      <div class="badge">
+        <div class="badge-label">Domicile</div>
+        <div class="badge-value">Singapore</div>
+      </div>
+      <div class="badge">
+        <div class="badge-label">Prime Broker</div>
+        <div class="badge-value">IBKR Prime</div>
+      </div>
+      <div class="badge">
+        <div class="badge-label">Strategy</div>
+        <div class="badge-value">Systematic / Algo</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- EXECUTIVE SUMMARY -->
+  <div class="section">
+    <div class="section-title">Executive Summary</div>
+    <p>
+      QuantWaveTech is a Singapore-based quantitative investment management firm focused on
+      the development and deployment of systematic trading strategies across U.S. financial markets.
+      All trading operations are executed via Interactive Brokers Prime through a dedicated server
+      infrastructure. Algorithm research and systems engineering are supported by a Zurich-based
+      development team.
+    </p>
+  </div>
+
+  <!-- FIRM DETAILS -->
+  <div class="section">
+    <div class="section-title">Firm Details</div>
+    <table class="info-table">
+      <tr><td>Registered Office</td><td>Level 24, CapitaGreen, 138 Market Street, Singapore</td></tr>
+      <tr><td>Jurisdiction</td><td>Republic of Singapore</td></tr>
+      <tr><td>Prime Broker</td><td>Interactive Brokers Prime (IBKR)</td></tr>
+      <tr><td>Operations Server</td><td>Dedicated infrastructure — all trade ops &amp; connectivity</td></tr>
+      <tr><td>R&amp;D Team</td><td>Engineering — Zurich, Switzerland</td></tr>
+      <tr><td>Primary Markets</td><td>NYSE · NASDAQ · CME Group Futures</td></tr>
+    </table>
+  </div>
+
+  <!-- MARKETS & INSTRUMENTS -->
+  <div class="section">
+    <div class="section-title">Markets &amp; Instruments</div>
+    <table class="info-table">
+      <tr><td>CME Futures</td><td>NQ · ES · GC · RTY</td></tr>
+      <tr><td>Equities</td><td>NYSE · NASDAQ</td></tr>
+      <tr><td>Execution Venue</td><td>CME GLOBEX (futures) · NYSE / NASDAQ (equities)</td></tr>
+      <tr><td>Clearing</td><td>Via IBKR Prime</td></tr>
+    </table>
+  </div>
+
+  <!-- INVESTMENT APPROACH -->
+  <div class="section">
+    <div class="section-title">Investment Approach</div>
+    <p style="margin-bottom:16px;">
+      QuantWaveTech combines quantitative research, systematic execution, and strict risk management to
+      identify and capture opportunities across liquid U.S. markets.
+    </p>
+    <ul class="bullet-list">
+      <li>Automated signal generation and portfolio construction</li>
+      <li>Multi-timeframe analysis — 1h / 30m / 15m / 5m / 1m</li>
+      <li>Volatility-based risk management with ATR-calibrated stops</li>
+      <li>Real-time position management and risk monitoring</li>
+      <li>Performance analytics and drawdown controls</li>
+      <li>Robust, repeatable processes designed for changing market conditions</li>
+    </ul>
+  </div>
+
+  <!-- TECHNOLOGY & INFRASTRUCTURE -->
+  <div class="section">
+    <div class="section-title">Technology &amp; Infrastructure</div>
+    <ul class="bullet-list">
+      <li>Dedicated server — all execution, signal generation, and connectivity</li>
+      <li>Algorithmic execution via Interactive Brokers Prime API</li>
+      <li>Statistical modeling and quantitative market analysis</li>
+      <li>Portfolio-level exposure controls and automated risk monitoring</li>
+      <li>In-house systems engineering team — Zurich</li>
+    </ul>
+  </div>
+
+  <!-- MISSION -->
+  <div class="section">
+    <div class="section-title">Mission</div>
+    <div class="mission-quote">
+      To build a disciplined quantitative investment platform capable of delivering scalable
+      and risk-controlled exposure to U.S. financial markets through systematic trading strategies.
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="foot-left">Level 24, CapitaGreen, 138 Market Street, Singapore</div>
+    <div class="foot-right"><a href="mailto:nz@quantwave.tech">nz@quantwave.tech</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
