@@ -4,6 +4,8 @@ QuantWaveTech · Trading Journal · 04/07 v1
 A private, local-first trading journal. All data stays on your machine —
 nothing is uploaded. Runs as a small local web app you open in your browser.
 
+**Price: $10.80 USD / month** (subscription).
+
 ---
 
 ## 1. Requirements
