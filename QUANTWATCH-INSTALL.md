@@ -1,7 +1,7 @@
 # QuantWatch — Installation Guide
 QuantWaveTech · Time & Focus Tracker · 05/07 v1
 
-**License: $27 USD — one-time** (single purchase, not a subscription).
+**License: $27 USD — one-time** (single purchase, not a subscription). **3-day free trial** before purchase.
 
 QuantWatch is a local time & focus tracker in the QuantWave design. It reads
 your real desktop activity from **ActivityWatch** and adds focus/rest tools,
